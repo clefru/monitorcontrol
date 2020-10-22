@@ -351,4 +351,4 @@ def get_monitors() -> List[Monitor]:
                 with monitor:
                     monitor.set_luminance(100)
     """
-    return [Monitor(v) for v in vcp.get_vcps()]
+    return [Monitor(v) for v in get_vcps()]
