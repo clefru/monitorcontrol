@@ -27,7 +27,7 @@ import ctypes
 import sys
 
 # hide the Windows code from Linux CI coverage
-if sys.platform == "win32":
+if sys.platform == "win32" or sys.platform == "cygwin":
     from ctypes.wintypes import (
         DWORD,
         RECT,

@@ -321,7 +321,7 @@ def get_vcps() -> List[Type[vcp.VCP]]:
         NotImplementedError: not implemented for your operating system
         VCPError: failed to list VCPs
     """
-    if sys.platform == "win32" or sys.platform.startswith("linux"):
+    if sys.platform == "win32" or sys.platform.startswith("linux") or sys.platform == "cygwin":
         return vcp.get_vcps()
     else:
         raise NotImplementedError(f"not implemented for {sys.platform}")

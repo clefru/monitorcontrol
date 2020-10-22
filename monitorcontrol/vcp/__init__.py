@@ -29,7 +29,7 @@ from .vcp_abc import (  # noqa: F401
     VCPPermissionError,
 )
 
-if sys.platform == "win32":
+if sys.platform == "win32" or sys.platform == "cygwin":
     from .vcp_windows import get_vcps  # noqa: F401
 elif sys.platform.startswith("linux"):
     from .vcp_linux import get_vcps  # noqa: F401
